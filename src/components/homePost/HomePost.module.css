@@ -1,0 +1,98 @@
+.homePost {
+  cursor: pointer;
+}
+
+.homePost .postCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homePost .imgBox img {
+  width: 25vw;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.homePost .explains {
+  display: flex;
+  width: 25vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homePost .explains .title {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.homePost .explains .date {
+  color: #777;
+  margin: 0.3rem 0;
+}
+
+.homePost .explains div {
+  align-self: flex-start;
+}
+
+.homePost .explains div img,
+.homePost .explains div br,
+.homePost .explains div strong,
+.homePost .explains div h1,
+.homePost .explains div h2,
+.homePost .explains div h3 {
+  display: none;
+}
+
+.homePost .explains div {
+  display: -webkit-box;
+  overflow: hidden;
+  line-height: 1.2;
+  max-height: 2.4rem;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.homePost .explains div p {
+  width: 25vw;
+}
+
+@media screen and (max-width: 1300px) {
+  .homePost {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homePost .imgBox {
+    width: 20rem;
+  }
+
+  .homePost .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .homePost .explains {
+    display: flex;
+    width: 20rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homePost .explains div p {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 450px) {
+}

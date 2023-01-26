@@ -1,0 +1,213 @@
+.postPage .postBox {
+  display: flex;
+}
+
+.postPage .postBox {
+  margin: 2rem 2rem 0 2rem;
+}
+
+.postPage .postBox * {
+  overflow-x: scroll;
+  /* when you want to add x-overflow-scroll in code block pre tag */
+}
+
+.postPage .postBox *::-webkit-scrollbar {
+  display: none;
+}
+
+.postPage .postBox pre::-webkit-scrollbar {
+  display: flex;
+  width: 0.4rem;
+  height: 0.4rem;
+}
+
+.postPage .postBox pre::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.postPage .postBox pre::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+.postPage .postBox .postImgTextBox .postTitleImgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 95vw;
+}
+
+.postPage .postBox .postImgTextBox .postTitleImgBox img {
+  width: 95vw;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postHeader p {
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postHeader p span {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #ff3e68;
+  text-transform: capitalize;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postHeader span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postHeader div {
+  position: absolute;
+  right: 0;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postHeader div i {
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postHeader div i:nth-child(1) {
+  color: teal;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postHeader div i:nth-child(2) {
+  color: lightcoral;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .authorAndDate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: darkgrey;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .authorAndDate p span {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postContentText {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postContentText img {
+  /* width: 100%; */
+}
+
+.postPage .postBox .postImgTextBox .postTextBox .postContentText pre {
+  background: black;
+  color: white;
+  padding: 1rem;
+  font: message-box;
+  /* white-space: pre-wrap; */
+  /* when you want to auto-change line in code block pre tag */
+}
+
+/* .postPage
+  .postBox
+  .postImgTextBox
+  .postTextBox
+  .postContentText
+  p:nth-child(1)::first-letter {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: #666;
+} */
+
+.postPage .postBox .postImgTextBox .postTextBox .postContentText a img {
+  width: 500px;
+}
+
+.circularBox {
+  height: calc(100vh - 3rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .postPage .postBox {
+    margin: 1rem;
+  }
+
+  .postPage .postBox .postImgTextBox .postTitleImgBox {
+    width: 100%;
+    margin: auto;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .postHeader {
+    margin-top: 0.5rem;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .postHeader p,
+  .postPage .postBox .postImgTextBox .postTextBox .postHeader div {
+    display: none;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .postHeader span {
+    font-size: 1.2rem;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .authorAndDate {
+    margin-top: 0.5rem;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .authorAndDate p {
+    font-size: 0.8rem;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .authorAndDate p span {
+    font-size: 0.8rem;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .authorAndDate span {
+    font-size: 0.8rem;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .postContentText img {
+    width: 100%;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .postContentText a img {
+    width: 100%;
+  }
+
+  .postPage .postBox .postImgTextBox .postTextBox .postContentText pre {
+    padding: 0.5rem 0.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 450px) {
+}

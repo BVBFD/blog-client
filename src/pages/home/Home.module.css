@@ -1,0 +1,181 @@
+.home {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.home .totalSearchBox {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-top: 0.4rem;
+  margin-bottom: -1rem;
+}
+
+.home .totalSearchBox .openTotalPosts {
+  cursor: pointer;
+  padding: 0.2rem;
+  margin-left: 0.3rem;
+  margin-top: 0.1rem;
+  background: royalblue;
+  color: whitesmoke;
+}
+
+.home .totalSearchBox .openTotalPosts:active {
+  transform: scale(0.8);
+}
+
+.home .totalSearchBox .searchInput {
+  padding: 0.3rem 0.2rem 0.3rem 0.2rem;
+  margin-right: 12%;
+  margin-top: 0.1rem;
+  border-radius: 0.4rem;
+}
+
+.home .homeBgImg {
+  position: relative;
+  user-select: none;
+}
+
+.home .homeBgImg::after {
+  content: '';
+  width: 100%;
+  height: 99%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#999, #999);
+  opacity: 0.4;
+}
+
+.home .homeBgImg img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+}
+
+.home .title {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 55vh;
+  top: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.home .title span {
+  color: #000;
+  mix-blend-mode: overlay;
+}
+
+.home .title span:nth-child(1) {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.home .title span:nth-child(2) {
+  font-size: 10rem;
+  font-weight: bolder;
+}
+
+.home .homeContentsPart {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.home .homeContentsPart .postsPart {
+  flex: 1 1 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  gap: 1rem;
+  position: relative;
+}
+
+.home ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.4rem 0 1.4rem 0;
+}
+
+.home ul li {
+  margin: 0.2rem 1.4rem 0.2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20rem;
+  height: 20rem;
+}
+
+.loader svg {
+  transform: scale(5);
+}
+
+@media screen and (max-width: 1300px) {
+  .home .title span:nth-child(1) {
+    display: none;
+  }
+
+  .home .title span:nth-child(2) {
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: bolder;
+  }
+
+  .home .totalSearchBox {
+    width: 100%;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+  }
+
+  .home .totalSearchBox .searchInput {
+    margin-right: 0.3rem;
+    margin-top: 0.1rem;
+    border-radius: 0.4rem;
+  }
+
+  .home .homeContentsPart {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+
+  .home .homeContentsPart .postsPart {
+    flex: 1 1 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.5rem;
+  }
+
+  .loader {
+    top: -35vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home .homeContentsPart .postsPart {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 450px) {
+}
+
+/* <div className={styles.loader}>
+            <CircularProgress />
+          </div> */

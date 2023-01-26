@@ -1,0 +1,90 @@
+.signupBox {
+  background: linear-gradient(rgb(153, 153, 153, 0.5), rgb(153, 153, 153, 0.5)),
+    url("../../../public/images/empire.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 93.8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupBox div:nth-child(1) span {
+  font-size: 2.5rem;
+  color: #ff5b5b;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.signupBox .idBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.signupBox .idBox span {
+  color: #ff5b5b;
+  align-self: flex-start;
+  height: 2rem;
+}
+
+.signupBox .idBox input {
+  height: 2rem;
+  border: none;
+  padding: 0.2rem;
+}
+
+.signupBox .emailBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.signupBox .emailBox span {
+  color: #ff5b5b;
+  align-self: flex-start;
+  height: 2rem;
+}
+
+.signupBox .emailBox input {
+  height: 2rem;
+  border: none;
+  padding: 0.2rem;
+}
+
+.signupBox .pwdBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.signupBox .pwdBox input {
+  height: 2rem;
+  border: none;
+  padding: 0.2rem;
+}
+
+.signupBox .pwdBox span {
+  align-self: flex-start;
+  color: #ff5b5b;
+  height: 2rem;
+}
+
+.signupBox button {
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background: #ff5b5b;
+  color: #fff;
+  text-transform: capitalize;
+  cursor: pointer;
+}

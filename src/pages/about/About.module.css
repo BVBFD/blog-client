@@ -1,0 +1,108 @@
+.about {
+  background: linear-gradient(rgb(153, 153, 153, 0.5), rgb(153, 153, 153, 0.5)),
+    url("../../../public/images/gallery-10.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 93.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about .aboutIntroBox {
+  display: flex;
+  flex-direction: row;
+  width: 60rem;
+  border: 1px solid gainsboro;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.about .pageTitle {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+  color: rgba(175, 187, 255, 0.9);
+}
+
+.about .aboutIntroBox .imgBox {
+  padding: 0.8rem;
+}
+
+.about .aboutIntroBox .imgBox img {
+  height: 100%;
+}
+
+.about .aboutIntroBox .aboutExplainBox {
+  padding: 0.8rem;
+  position: relative;
+}
+
+.about .aboutIntroBox .aboutExplainBox header {
+  font-size: 2.4rem;
+  font-weight: bolder;
+}
+
+.about .aboutIntroBox .aboutExplainBox p {
+  font-size: 1.2rem;
+  margin-top: 1.4rem;
+}
+
+.about .aboutIntroBox .aboutExplainBox button {
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  background: #fff;
+  font-weight: bold;
+  border: none;
+  box-shadow: 8px 8px 0.4rem #3f3f3f;
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  cursor: pointer;
+}
+
+.about .aboutIntroBox .aboutExplainBox button:hover {
+  background: #000;
+  color: #fff;
+  box-shadow: 8px 8px 0.4rem #fff;
+}
+
+@media screen and (max-width: 1300px) {
+  .about {
+    height: 100vh;
+  }
+
+  .about .aboutIntroBox {
+    flex-direction: column;
+    width: 18rem;
+    margin-top: 4rem;
+  }
+
+  .about .aboutIntroBox .imgBox {
+    width: 18rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .aboutIntroBox .imgBox img {
+    width: 95%;
+    margin-top: 0.5rem;
+    height: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 380px) {
+  .about .aboutIntroBox {
+    margin-top: 10rem;
+  }
+}

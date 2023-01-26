@@ -1,0 +1,86 @@
+.settingBox {
+  background: linear-gradient(rgb(153, 153, 153, 0.5), rgb(153, 153, 153, 0.5)),
+    url("../../../public/images/kislev.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 93.8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+.settingBox h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.settingBox .settingDataBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  padding: 0 4rem;
+}
+
+.settingBox .settingDataBox h3 {
+  font-weight: normal;
+  margin: 1rem 0;
+}
+
+.settingBox .settingDataBox .profileBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.settingBox .settingDataBox .profileBox .imgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.settingBox .settingDataBox .profileBox .imgBox img {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.settingBox .settingDataBox .profileBox .imgBox label {
+  cursor: pointer;
+}
+
+.settingBox .settingDataBox .profileBox .imgBox label i {
+  font-size: 2.5rem;
+}
+
+.settingBox .settingDataBox .profileBox label {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.settingBox .settingDataBox .profileBox input {
+  padding: 0.5rem;
+}
+
+.settingBox button {
+  margin: 1rem 0;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.settingBox .deleteBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

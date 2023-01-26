@@ -1,0 +1,210 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.4rem;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 0.6rem 0;
+  height: 3rem;
+  z-index: 999;
+}
+
+.paddingSmaller {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.4rem;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 0.4rem 0;
+  z-index: 999;
+}
+
+.header .toggleBar {
+  display: none;
+}
+.header .toggleExit {
+  display: none;
+}
+
+.header i {
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.header .mobileCoverBox {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.header .socialSNSs a {
+  color: #000;
+}
+
+.header .socialSNSs i {
+  margin: 0 0.4rem;
+}
+
+.header .pageLinks a {
+  margin: 0 0.8rem;
+}
+
+.header .settingsBox a,
+.header .settingsBox i {
+  margin: 0 0.8rem;
+}
+
+.header a:hover,
+.header i:hover {
+  color: #999;
+}
+
+.header .logoutBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .logoutBox span {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.header .logoutBox .profileImgBox {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.header .logoutBox .profileImgBox img {
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: top;
+  position: absolute;
+  top: 0.2rem;
+}
+
+.header .logoutBox i {
+  margin-left: 2.4rem;
+  margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .header .toggleBar {
+    display: none;
+    margin-left: 1rem;
+  }
+
+  .header .toggleBar.toggle {
+    display: block;
+  }
+
+  .header .toggleExit {
+    display: block;
+    margin-left: 1rem;
+  }
+
+  .header .toggleExit.toggle {
+    display: none;
+  }
+
+  .header .socialSNSs {
+    display: none;
+  }
+
+  .header {
+    position: relative;
+    justify-content: space-between;
+    margin-right: 1rem;
+  }
+
+  .header .mobileCoverBox {
+    width: 100vw;
+    position: absolute;
+    background: #fff;
+    top: 3rem;
+    display: block;
+  }
+
+  .header .mobileCoverBox.mobileCoverBoxToggle {
+    display: none;
+    animation: animate 0.2s linear;
+  }
+
+  @keyframes animate {
+    0% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  }
+
+  .header .mobileCoverBox .pageLinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .mobileCoverBox .settingsBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .mobileCoverBox.mobileCoverBoxToggle .logoutBox {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -2.8rem;
+    right: 5rem;
+  }
+
+  .header .mobileCoverBox .logoutBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -2.8rem;
+    right: 5rem;
+  }
+
+  .header .logoutBox.toggle {
+    display: none;
+  }
+
+  .header .logoutBox span {
+    margin-right: 1rem;
+    margin-top: 0.4rem;
+    cursor: pointer;
+  }
+
+  .header .logoutBox .profileImgBox {
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .header .logoutBox .profileImgBox img {
+    width: 2.6rem;
+    height: 2.6rem;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: top;
+  }
+
+  .header .logoutBox i {
+    margin-left: 2.4rem;
+    margin-top: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 450px) {
+}

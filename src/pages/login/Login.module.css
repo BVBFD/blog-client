@@ -1,0 +1,70 @@
+.loginBox {
+  background: linear-gradient(rgb(153, 153, 153, 0.5), rgb(153, 153, 153, 0.5)),
+    url("../../../public/images/login.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 93.8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox div:nth-child(1) span {
+  font-size: 2.5rem;
+  color: #aaaaff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.loginBox .idBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.loginBox .idBox span {
+  color: #aaaaff;
+  align-self: flex-start;
+  height: 2rem;
+}
+
+.loginBox .idBox input {
+  height: 2rem;
+  border: none;
+  padding: 0.2rem;
+}
+
+.loginBox .pwdBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.loginBox .pwdBox input {
+  height: 2rem;
+  border: none;
+  padding: 0.2rem;
+}
+
+.loginBox .pwdBox span {
+  align-self: flex-start;
+  color: #aaaaff;
+  height: 2rem;
+}
+
+.loginBox button {
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background: #5555ff;
+  color: #fff;
+  text-transform: capitalize;
+  cursor: pointer;
+}

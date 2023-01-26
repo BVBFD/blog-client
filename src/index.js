@@ -8,28 +8,20 @@ import { hydrate, render } from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
+const app = (
+  <React.StrictMode>
+    <BrowserRouter>
+      <ContextProvider>
+        <App />
+      </ContextProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
 if (rootElement.hasChildNodes()) {
-  hydrate(
-    <React.StrictMode>
-      <BrowserRouter>
-        <ContextProvider>
-          <App />
-        </ContextProvider>
-      </BrowserRouter>
-    </React.StrictMode>,
-    rootElement
-  );
+  hydrate(app, rootElement);
 } else {
-  render(
-    <React.StrictMode>
-      <BrowserRouter>
-        <ContextProvider>
-          <App />
-        </ContextProvider>
-      </BrowserRouter>
-    </React.StrictMode>,
-    rootElement
-  );
+  render(app, rootElement);
 }
 
 // ReactDOM.render(

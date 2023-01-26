@@ -31,10 +31,6 @@
   "reactSnap": {
     "include": ["/", "/post"]
   },
-  "puppeteerArgs": [
-    "--no-sandbox",
-    "--disable-setuid-sandbox"
-  ],
   "eslintConfig": {
     "extends": [
       "react-app",

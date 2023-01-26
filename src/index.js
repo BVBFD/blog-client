@@ -17,7 +17,7 @@ if (rootElement.hasChildNodes()) {
         </ContextProvider>
       </BrowserRouter>
     </React.StrictMode>,
-    document.getElementById('root')
+    rootElement
   );
 } else {
   render(
@@ -28,7 +28,7 @@ if (rootElement.hasChildNodes()) {
         </ContextProvider>
       </BrowserRouter>
     </React.StrictMode>,
-    document.getElementById('root')
+    rootElement
   );
 }
 

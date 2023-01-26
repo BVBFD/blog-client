@@ -6,6 +6,7 @@ import Write from '../write/Write';
 import { Context } from '../../context/context';
 import axiosInstance from '../../config';
 import { CircularProgress } from '@mui/material';
+import { SuperSEO } from 'react-super-seo';
 
 import 'react-quill/dist/quill.snow.css';
 import 'react-quill/dist/quill.core.css';
@@ -69,14 +70,14 @@ const Post = () => {
   }, []);
 
   useEffect(() => {
-    document.querySelectorAll('meta')[3].content = `${post.title}`;
-    document.querySelectorAll('meta')[4].content = `${post.title}`;
-    document.querySelectorAll(
-      'meta'
-    )[5].content = `https://www.lsevina126.asia/post/${post._id}`;
-    document.querySelectorAll('meta')[7].content = `${post.title}`;
-    document.querySelectorAll('meta')[8].content = `${post.imgUrl}`;
-    document.querySelectorAll('meta')[9].content = `${post.title}`;
+    // document.querySelectorAll('meta')[3].content = `${post.title}`;
+    // document.querySelectorAll('meta')[4].content = `${post.title}`;
+    // document.querySelectorAll(
+    //   'meta'
+    // )[5].content = `https://www.lsevina126.asia/post/${post._id}`;
+    // document.querySelectorAll('meta')[7].content = `${post.title}`;
+    // document.querySelectorAll('meta')[8].content = `${post.imgUrl}`;
+    // document.querySelectorAll('meta')[9].content = `${post.title}`;
     document.querySelector(
       'title'
     ).innerText = `Blog Project - ${post.title} - ${post.catName}`;
@@ -87,6 +88,31 @@ const Post = () => {
 
   return (
     <section className={styles.postPage}>
+      <SuperSEO
+        title={post.title}
+        description={post.title}
+        lang='en'
+        openGraph={{
+          ogImage: {
+            ogImage: `${post.imgUrl}`,
+            ogImageAlt: `${post.title}`,
+            ogImageType: 'image/*',
+          },
+          ogTitle: `${post.title}`,
+          ogUrl: `https://www.lsevina126.asia/post/${post._id}`,
+          ogSiteName: `${post.title}`,
+          ogDescription: `${post.title}`,
+        }}
+        twitter={{
+          twitterSummaryCard: {
+            summaryCardImage: `${post.imgUrl}`,
+            summaryCardImageAlt: `${post.title}`,
+            summaryCardSiteUsername: 'lsevina126',
+          },
+        }}
+      >
+        <meta name='description' content={post.title} />
+      </SuperSEO>
       {!editBtnIndex ? (
         <>
           <Header />

@@ -96,7 +96,7 @@ const Post = () => {
           ogImage: {
             ogImage: `${post.imgUrl}`,
             ogImageAlt: `${post.title}`,
-            ogImageType: 'image/*',
+            ogImageType: 'image/gif',
           },
           ogTitle: `${post.title}`,
           ogUrl: `https://www.lsevina126.asia/post/${post._id}`,

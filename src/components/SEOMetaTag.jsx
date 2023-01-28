@@ -19,7 +19,7 @@ const SEOMetaTag = ({ post }) =>
     </Helmet>
   ) : (
     <Helmet>
-      <title>Blog Project</title>
+      <title>{post.title}</title>
       <meta name='description' content={post.title} />
       <meta property='og:title' content={post.title} />
       <meta

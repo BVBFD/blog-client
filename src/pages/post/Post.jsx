@@ -11,6 +11,7 @@ import 'react-quill/dist/quill.snow.css';
 import 'react-quill/dist/quill.core.css';
 import 'react-quill/dist/quill.bubble.css';
 import 'highlight.js/styles/vs2015.css';
+import SEOMetaTag from '../../components/SEOMetaTag';
 
 const Post = () => {
   const [post, setPost] = useState({});
@@ -68,89 +69,75 @@ const Post = () => {
       .forEach((img) => img.setAttribute('crossOrigin', 'anonymous'));
   }, []);
 
-  useEffect(() => {
-    document.querySelectorAll('meta')[3].content = `${post.title}`;
-    document.querySelectorAll('meta')[4].content = `${post.title}`;
-    document.querySelectorAll(
-      'meta'
-    )[5].content = `https://www.lsevina126.asia/post/${post._id}`;
-    document.querySelectorAll('meta')[7].content = `${post.title}`;
-    document.querySelectorAll('meta')[8].content = `${post.imgUrl}`;
-    document.querySelectorAll('meta')[9].content = `${post.title}`;
-    document.querySelector(
-      'title'
-    ).innerText = `Blog Project - ${post.title} - ${post.catName}`;
-    document.querySelectorAll(
-      'link'
-    )[1].href = `https://www.lsevina126.asia/post/${post._id}`;
-  }, [post]);
-
   return (
-    <section className={styles.postPage}>
-      {!editBtnIndex ? (
-        <>
-          <Header />
-          <div className={styles.postBox}>
-            <div className={styles.postImgTextBox}>
-              <div className={styles.postTitleImgBox}>
-                {post.imgUrl === '' ? (
-                  <img src='../images/postdefaultimg.png' />
-                ) : (
-                  <img crossOrigin='anonymous' src={post.imgUrl} alt='' />
-                )}
-              </div>
-              <div className={styles.postTextBox}>
-                <header className={styles.postHeader}>
-                  <p>
-                    Category: <span>{post.catName}</span>
-                  </p>
-                  <span>{post.title}</span>
-                  <div>
-                    <i
-                      onClick={() => {
-                        if (!editBtnIndex) {
-                          setEditBtnIndex(true);
-                        } else {
-                          setEditBtnIndex(false);
-                        }
-                      }}
-                      class='fa-solid fa-pen-to-square'
-                    ></i>
-                    <i onClick={deletePost} class='fa-solid fa-trash'></i>
-                  </div>
-                </header>
-                {post.text === undefined ? (
-                  <></>
-                ) : (
-                  <div className={styles.authorAndDate}>
-                    <p>
-                      Author: <span>{post.author}</span>
-                    </p>
-                    <span>{new Date(post.createdAt).toDateString()}</span>
-                  </div>
-                )}
-                <div className='ql-snow'>
-                  {post.text === undefined ? (
-                    <div className={styles.circularBox}>
-                      <CircularProgress size={60} />
-                    </div>
+    <>
+      <SEOMetaTag post={post} />
+      <section className={styles.postPage}>
+        {!editBtnIndex ? (
+          <>
+            <Header />
+            <div className={styles.postBox}>
+              <div className={styles.postImgTextBox}>
+                <div className={styles.postTitleImgBox}>
+                  {post.imgUrl === '' ? (
+                    <img src='../images/postdefaultimg.png' />
                   ) : (
-                    <div
-                      class='ql-editor'
-                      ref={postTextBoxRef}
-                      className={styles.postContentText}
-                      dangerouslySetInnerHTML={inputText()}
-                    ></div>
+                    <img crossOrigin='anonymous' src={post.imgUrl} alt='' />
                   )}
+                </div>
+                <div className={styles.postTextBox}>
+                  <header className={styles.postHeader}>
+                    <p>
+                      Category: <span>{post.catName}</span>
+                    </p>
+                    <span>{post.title}</span>
+                    <div>
+                      <i
+                        onClick={() => {
+                          if (!editBtnIndex) {
+                            setEditBtnIndex(true);
+                          } else {
+                            setEditBtnIndex(false);
+                          }
+                        }}
+                        class='fa-solid fa-pen-to-square'
+                      ></i>
+                      <i onClick={deletePost} class='fa-solid fa-trash'></i>
+                    </div>
+                  </header>
+                  {post.text === undefined ? (
+                    <></>
+                  ) : (
+                    <div className={styles.authorAndDate}>
+                      <p>
+                        Author: <span>{post.author}</span>
+                      </p>
+                      <span>{new Date(post.createdAt).toDateString()}</span>
+                    </div>
+                  )}
+                  <div className='ql-snow'>
+                    {post.text === undefined ? (
+                      <div className={styles.circularBox}>
+                        <CircularProgress size={60} />
+                      </div>
+                    ) : (
+                      <div
+                        class='ql-editor'
+                        ref={postTextBoxRef}
+                        className={styles.postContentText}
+                        dangerouslySetInnerHTML={inputText()}
+                      ></div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </>
-      ) : (
-        <Write setEditBtnIndex={setEditBtnIndex} />
-      )}
-    </section>
+          </>
+        ) : (
+          <Write setEditBtnIndex={setEditBtnIndex} />
+        )}
+      </section>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { ServerPosts } = require('./serverPosts');
-const PORT = process.env.REACT_APP_SERVER_PORT || 3000;
+const PORT = process.env.REACT_APP_SERVER_PORT || 5000;
 const fs = require('fs');
 
 app.get('/', (req, res) => {

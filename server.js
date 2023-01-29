@@ -5,8 +5,6 @@ const { ServerPosts } = require('./serverPosts');
 const PORT = process.env.REACT_APP_SERVER_PORT || 3000;
 const fs = require('fs');
 
-app.use(express.static(path.resolve(__dirname, './build')));
-
 app.get('/', (req, res) => {
   const filePath = path.resolve(__dirname, './build', 'index.html');
   fs.readFile(filePath, 'utf8', (err, data) => {
@@ -41,6 +39,8 @@ app.get('/post/*', (req, res) => {
     res.send(data);
   });
 });
+
+app.use(express.static(path.resolve(__dirname, './build')));
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);

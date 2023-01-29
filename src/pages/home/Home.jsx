@@ -58,11 +58,6 @@ const Home = (props) => {
       setSelectedArray([res.data[0], res.data[1], res.data[2], res.data[3]]);
       setTotalPosts(res.data);
       setBooleanSidebarIndex(false);
-
-      document.querySelectorAll(
-        'meta'
-      )[3].content = `Blog Project with React and NodeJS`;
-      document.querySelector('title').innerText = `Blog Project`;
     } catch (err) {
       window.alert(err);
     }

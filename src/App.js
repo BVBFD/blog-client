@@ -13,7 +13,6 @@ import Write from './pages/write/Write';
 const App = (props) => {
   return (
     <>
-      <SEOMetaTag />
       <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path={'/login'} element={<Login />} />
